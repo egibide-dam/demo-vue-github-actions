@@ -1,12 +1,3 @@
 # demo-vue-github-actions
 
-```
- _________________________________
-< The bogosity meter just pegged. >
- ---------------------------------
-        \   ^__^
-         \  (oo)\_______
-            (__)\       )\/\
-                ||----w |
-                ||     ||
-```
+Demo de Vue con GitHub Actions.
