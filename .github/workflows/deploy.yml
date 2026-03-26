@@ -28,11 +28,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout del repositorio
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
       - name: Instalar Node.js, versión LTS
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
-          node-version: lts/*
+          node-version: 'lts/*'
       - name: Instalar los paquetes y construir la aplicación
         run: |
           npm ci
@@ -40,7 +40,7 @@ jobs:
       - name: Configurar GitHub Pages
         uses: actions/configure-pages@v5
       - name: Cargar los artefactos producidos
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
           path: vue-demo/dist
 
@@ -52,4 +52,4 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Desplegar en GitHub Pages
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
